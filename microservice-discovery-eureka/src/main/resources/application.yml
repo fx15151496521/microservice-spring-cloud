@@ -1,0 +1,17 @@
+server:
+  port: 8761
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://zhangSan:zhangSan2018@localhost:8761/eureka
+    healthcheck:
+      enabled: true
+spring:
+  security:
+    basic:
+      enabeld: true #启用身份验证
+    user:
+      name: zhangSan #登录账号
+      password: zhangSan2018 #登录密码
