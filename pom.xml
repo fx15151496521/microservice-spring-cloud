@@ -20,6 +20,7 @@
     <module>microservice-discovery-eureka</module>
     <module>microservice-consumer-movie-ribbon</module>
     <module>microservice-producer-user-two</module>
+    <module>microservice-router-zuul</module>
   </modules>
 
   <dependencies>
