@@ -22,6 +22,7 @@
     <module>microservice-producer-user-two</module>
     <module>microservice-router-zuul</module>
     <module>microservice-server-config</module>
+    <module>microservice-invoke-feign</module>
   </modules>
 
   <dependencies>
