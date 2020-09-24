@@ -21,6 +21,7 @@
     <module>microservice-consumer-movie-ribbon</module>
     <module>microservice-producer-user-two</module>
     <module>microservice-router-zuul</module>
+    <module>microservice-server-config</module>
   </modules>
 
   <dependencies>
