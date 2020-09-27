@@ -1,5 +1,8 @@
 server:
   port: 8078
+  tomcat:
+    threads:
+      max: 50
 spring:
   application:
     name: mircoservice-invoke-feign
@@ -12,3 +15,18 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 4000
+        readTimeout: 4000
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000

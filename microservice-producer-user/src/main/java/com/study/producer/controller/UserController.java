@@ -28,6 +28,11 @@ public class UserController {
 
     @GetMapping("/simple/{id}")
     public User findById(@PathVariable Long id) {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return userRepository.findById(id).get();
     }
 

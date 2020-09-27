@@ -14,11 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FeignController {
 
-    @Autowired
+    @Autowired(required = false)
     private FeignUserService feignUserService;
 
     @GetMapping("/getUser/{id}")
     public User findById(@PathVariable Long id) {
         return feignUserService.getUserById(id);
+    }
+
+    @GetMapping("/getOrderInfo")
+    public String getOrderInfo() {
+        return "测试获取订单服务.....";
     }
 }
